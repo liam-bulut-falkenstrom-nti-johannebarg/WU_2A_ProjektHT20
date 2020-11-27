@@ -1,34 +1,66 @@
 *{
-    margin: 0;
-    padding: 0;
+    margin: 0px;
+    padding: 0px;
+    box-sizing:border-box;
 }
 
-#frontp_grid_wrapper{
-    background:gray;
+#index_grid_wrapper{
     display:grid;
-    width: 100vw;
+    width: 98.7vw;
+    height: 800px;
     grid-template-columns: 1fr;
-    grid-template-rows: 1000px 80px;
+    grid-template-rows: 1fr 80px;
     grid-template-areas: 
     "ma"
     "fo";
 }
 
-#frontp_main{
-    background:green;
+#index_main{
+    background-image:url("/img/WallTexture.jpg");
     grid-area: ma;
     display:grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 200px 300px 500px;
+    grid-template-rows: 100px 320px 500px;
+    row-gap: 10px;
     grid-template-areas: 
     "he"
     "us"
     "ls";
 }
 
-#up
+#index_header{
+    background-color: black;
+    opacity: 0.7;
+    grid-area: he;
+    top: 0px;
+    position: sticky;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas: 
+    "lo me";
+}
 
-#frontp_footer{
-    background: blue;
+#index_meny {
+    display:flex;
+    grid-area: me;
+}
+
+#upper_index_sektion{
+    background: black;
+    grid-area: us;
+    opacity: 0.5;
+}
+
+#lower_index_sektion{
+    background:black;
+    grid-area: ls;
+    opacity:0.5;
+}
+
+
+#index_footer {
+    background:rgb(43, 41, 41);
     grid-area: fo;
+
 }
