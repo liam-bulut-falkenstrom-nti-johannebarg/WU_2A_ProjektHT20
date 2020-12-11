@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap');
+
+
+
+/* Allmänt för alla sidor */
+
 *{
     margin: 0px;
     padding: 0px;
@@ -5,22 +12,86 @@
     color: white;
 }
 
-body{
+a{
+    text-decoration: none
+}
+
+a:hover{
+    color: rgb(150, 150, 150);
+}
+
+
+
+header{
+    grid-area:he;
+    background-color:rgb(22, 18, 16, 0.8);
+    opacity: 1;
+    top: 0px;
+    height: 100px;
+    position: sticky;
+    display:grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "lo na";
+}
+
+nav {
+    grid-area: na;
+    background-color:rgb(22, 18, 16, 0);
+    color: rgba(0,0,0,1);
+}
+
+.nav_list{
+    background-color:rgb(22, 18, 16, 0);
+    height:100%;
+    padding: 0px 0px 0px 300px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style-type: none;
+}
+
+.nav_list li{
+    font-size: 30px;
+    color: rgb(255, 255, 255, 1.0);
+}
+
+#logotyp_meny{
+    grid-area: lo;
+}
+
+
+
+footer {
+    background:rgb(22, 18, 16);
+    grid-area: fo;
+
+}
+
+
+
+/* Meny */
+
+#meny_body{
     background-color: black;
 }
 
-#index_grid_wrapper{
+#meny_grid_wrapper{
     display:grid;
     width: 98.7vw;
-    height: 700px;
+    height: 1050px;
     grid-template-columns: 1fr;
-    grid-template-rows: 1fr 80px;
+    grid-template-rows: 100px 180px 1fr 80px;
     grid-template-areas: 
+    "he"
+    "im"
     "ma"
     "fo";
 }
 
-#index_main{
+#meny_main{
     background-image:url("/img/Turkey_Night.jpg");
     grid-area: ma;
     display:grid;
@@ -30,65 +101,369 @@ body{
     "us ls" ;
 }
 
-#kebab_index{
+#kebab_bild_meny{
     width: 98.7vw;
+    grid-area: im;
 }
 
-#index_header{
-    background-color: black;
-    opacity: 1;
-    top: 0px;
-    height: 80px;
-    position: sticky;
-    display:grid;
-    grid-template-columns: 1fr 3fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: 
-    "lo me";
-}
 
-#index_meny {
-    grid-area: me;
-    background-color: white;
-    color: rgba(0,0,0,1);
-}
 
-.meny_list{
-    background-color: black;
-    height:100%;
-    display:flex;
-    flex-wrap:wrap;
-    justify-content: space-evenly;
-    align-items: center;
-    list-style-type: none;
-}
-
-.meny_list li{
-    font-size: 30px;
-    color: rgb(255, 255, 255, 1.0)
-}
-
-#logotyp_index{
-    grid-area: lo;
-}
-
-#upper_index_sektion{
+#left_meny_sektion{
     background: black;
     grid-area: us;
-    opacity: 0.5;
-    margin: 40px 100px 40px 100px;
+    background-color: rgba(0,0,0,0.6);
+    margin: 100px 50px 100px 50px;
+    font-family: 'Satisfy', cursive;
+    border-radius: 10px;
 }
 
-#lower_index_sektion{
+#list_wrapper_left{
+    display:grid;
+    height: 100%;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "RuM RuM"
+    "Ma1 Pm1"
+    "Ma2 Pm2"
+    "Ma3 Pm3"
+    "Ma4 Pm4";
+}
+
+#Mat_rubrik{
+    grid-area: RuM;
+    border-bottom: 5px dotted white;
+    margin: 0px 20px 0px 20px;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    font-size: 40px;
+}
+
+#Mat_1{
+    grid-area: Ma1;
+    border-bottom: 5px dotted white;
+    margin: 0px 20px 0px 20px;
+    padding: 20px;
+    display:flex;
+    align-items:center;
+    justify-content:left;
+    font-size: 25px;
+}
+
+#Mat_2{
+    grid-area: Ma2;
+    border-bottom: 5px dotted white;
+    margin: 0px 20px 0px 20px;
+    padding: 20px;
+    display: flex;
+    align-items:center;
+    justify-content:left;
+    font-size: 25px;
+}
+
+#Mat_3{
+    grid-area: Ma3;
+    border-bottom: 5px dotted white;
+    margin: 0px 20px 0px 20px;
+    padding: 20px;
+    display: flex;
+    align-items:center;
+    justify-content:left;
+    font-size: 25px;
+}
+
+#Mat_4{
+    grid-area: Ma4;
+    margin: 0px 20px 0px 20px;
+    padding: 20px;
+    display: flex;
+    align-items:center;
+    justify-content:left;
+    font-size: 25px;
+}
+
+#pris_m_1{
+    grid-area: Pm1;
+    border-bottom: 5px dotted white;
+    margin: 0px 20px 0px 20px;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    font-size: 30px;
+}
+
+#pris_m_2{
+    grid-area: Pm2;
+    border-bottom: 5px dotted white;
+    margin: 0px 20px 0px 20px;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    font-size: 30px;
+}
+
+#pris_m_3{
+    grid-area: Pm3;
+    border-bottom: 5px dotted white;
+    margin: 0px 20px 0px 20px;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    font-size: 30px;
+}
+
+#pris_m_4{
+    grid-area: Pm4;
+    margin: 0px 20px 0px 20px;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    font-size: 30px;
+}
+
+
+
+
+#right_meny_sektion{
     background:black;
     grid-area: ls;
-    opacity:0.5;
-    margin: 40px 100px 40px 100px;
+    background-color: rgba(0,0,0,0.6);
+    margin: 100px 50px 100px 50px;
+    font-family: 'Satisfy', cursive;
+    border-radius: 10px
+}
+
+#list_wrapper_right{
+    display:grid;
+    height: 100%;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "RuD RuD"
+    "Dr1 Pd1"
+    "Dr2 Pd2"
+    "Dr3 Pd3"
+    "Dr4 Pd4";
+}
+
+#Dricka_rubrik{
+    grid-area: RuD;
+    border-bottom: 5px dotted white;
+    margin: 0px 20px 0px 20px;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    font-size: 40px
+}
+
+#Dricka_1{
+    grid-area: Dr1;
+    border-bottom: 5px dotted white;
+    margin: 0px 20px 0px 20px;
+    padding: 20px;
+    display:flex;
+    align-items:center;
+    justify-content:left;
+    font-size: 25px;
+}
+
+#Dricka_2{
+    grid-area: Dr2;
+    border-bottom: 5px dotted white;
+    margin: 0px 20px 0px 20px;
+    padding: 20px;
+    display: flex;
+    align-items:center;
+    justify-content:left;
+    font-size: 25px;
+}
+
+#Dricka_3{
+    grid-area: Dr3;
+    border-bottom: 5px dotted white;
+    margin: 0px 20px 0px 20px;
+    padding: 20px;
+    display: flex;
+    align-items:center;
+    justify-content:left;
+    font-size: 25px;
+}
+
+#Dricka_4{
+    grid-area: Dr4;
+    margin: 0px 20px 0px 20px;
+    padding: 20px;
+    display: flex;
+    align-items:center;
+    justify-content:left;
+    font-size: 25px;
+}
+
+#pris_d_1{
+    grid-area: Pd1;
+    border-bottom: 5px dotted white;
+    margin: 0px 20px 0px 20px;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    font-size: 30px;
+}
+
+#pris_d_2{
+    grid-area: Pd2;
+    border-bottom: 5px dotted white;
+    margin: 0px 20px 0px 20px;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    font-size: 30px;
+}
+
+#pris_d_3{
+    grid-area: Pd3;
+    border-bottom: 5px dotted white;
+    margin: 0px 20px 0px 20px;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    font-size: 30px;
+}
+
+#pris_d_4{
+    grid-area: Pd4;
+    margin: 0px 20px 0px 20px;
+    display: flex;
+    align-items:center;
+    justify-content:center;
+    font-size: 30px;
 }
 
 
-#index_footer {
-    background: white;
-    grid-area: fo;
 
+/* Index */
+
+#index_body{
+    background-image: url("/img/Index_Banner.jpg"); 
+}
+
+#index_grid_wrapper{
+    background-color: rgba(0,0,0,0);
+    display:grid;
+    width: 98.7vw;
+    height: 1250px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr 80px;
+    grid-template-areas: 
+    "he"
+    "ma"
+    "fo";
+}
+
+#index_main{
+    height: 1180px;
+    grid-area: ma;
+    display:grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 2fr 2fr;
+    grid-template-areas: 
+    "Ir Ir"
+    "Om In";
+}
+
+#index_main h1{
+    grid-area: Ir;
+    background-color: rgba(141, 42, 42, 0.0);
+    display:flex;
+    align-items:left;
+    justify-content:center;
+    padding: 110px;
+    font-family: 'Kaushan Script', cursive;
+    font-size: 100px;
+    letter-spacing: 5px;
+}
+
+
+
+#index_sektion_om_oss{
+    grid-area: Om;
+    background-color: rgba(0, 0, 0, 0.8);
+    margin: 20px 100px 100px 50px;
+    border-radius: 20px;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 4fr;
+    grid-template-areas: 
+    "Oh2"
+    "Oh3";
+    }
+
+#index_sektion_om_oss h2{
+    grid-area: Oh2;
+    display:flex;
+    align-items:center;
+    justify-content:left;
+    font-size: 40px;
+    padding: 25px;
+}
+
+#index_sektion_om_oss h3{
+    grid-area: Oh3;
+    display:flex;
+    align-items:left;
+    justify-content:left;
+    font-size: 20px;
+    padding: 0px 25px 0px 25px;
+    line-height: 30px;
+}
+
+
+
+#index_restaurang_info{
+    grid-area: In;
+    background-color: rgb(0, 0, 0, 0.8);
+    margin: 0px 0px 70px 0px;
+    border-radius: 20px 0px 0px 20px;
+}
+
+#index_restaurang_info h2{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size: 30px;
+    padding: 40px;    
+}
+
+#index_restaurang_info h3{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size: 25px;
+    padding: 0px;
+    color: rgb(165, 165, 165);    
+}
+
+#index_restaurang_info h4{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size: 20px;
+    padding: 0px 0px 20px 0px;    
+}
+
+
+
+/* Galleri */
+
+#galleri_grid_wrapper{
+    background-color: rgba(0,0,0,0);
+    display:grid;
+    width: 98.7vw;
+    height: 1250px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 1fr 80px;
+    grid-template-areas: 
+    "he"
+    "ma"
+    "fo";
 }

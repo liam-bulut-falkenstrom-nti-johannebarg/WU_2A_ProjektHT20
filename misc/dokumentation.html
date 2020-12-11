@@ -88,18 +88,34 @@
     <!-- Här skriver du efter varje lektion. Vad har jag gjort? Vad gick bra? Vad gick mindre bra? Vad ska jag tänka på till nästa gång? -->
 
     <h3>Lektioner vecka 47</h3>
-    Jag har skissat en preliminär layout som jag är nöjd med och har även börjat koda den lite i VSC. <img src="img/Preliminär_skiss_på_layout.jpg" alt="preliminär bild på skiss"> Jag vill ha min header i min main då jag vill göra header och nav lite transparenta vilket jag tror kommer se bra ut. Jag valde att ha min nav inuti min header då jag vill att navigeringslänkarna ska finnas till höger om logotypen i headern. Jag vill att sidan ska ta upp mer utrymme i höjden än skrämens höjd eftersom jag vill få plats med lite större bilder och illustrationer. Jag tycker dessutom att en scrollbar sida känns lite mer professionell då man får intrycket att den innehåller mer. Hitills har allt gått bra, jag testar ifall min grid layout fungerar genom att ge de olika taggarna färger så att det är lättare att se var de placeras. Har även sett till att ge varje tagg ett lämpligt namn för att få till en bra struktur så att det inte blir rörigt när jag sedan lägger till ytterligare två sidor med sina egna taggar. Nästa gång kommer jag fortsätta med att färdigställa layouten så att den blir enligt skiss. 
+    Jag har skissat en preliminär layout som jag är nöjd med och har även börjat koda den lite i VSC. <img src="/img/Preliminär_skiss_på_layout.jpg" alt="preliminär bild på skiss"> Jag vill ha min header i min main då jag vill göra header och nav lite transparenta vilket jag tror kommer se bra ut. Jag valde att ha min nav inuti min header då jag vill att navigeringslänkarna ska finnas till höger om logotypen i headern. Jag vill att sidan ska ta upp mer utrymme i höjden än skrämens höjd eftersom jag vill få plats med lite större bilder och illustrationer. Jag tycker dessutom att en scrollbar sida känns lite mer professionell då man får intrycket att den innehåller mer. Hitills har allt gått bra, jag testar ifall min grid layout fungerar genom att ge de olika taggarna färger så att det är lättare att se var de placeras. Har även sett till att ge varje tagg ett lämpligt namn för att få till en bra struktur så att det inte blir rörigt när jag sedan lägger till ytterligare två sidor med sina egna taggar. Nästa gång kommer jag fortsätta med att färdigställa layouten så att den blir enligt skiss. 
     <!-- Fyll på med dokumentation här. -->
 
     <h3>Lektioner vecka 48</h3>
-    Jag försökte göra transparent och fixed (visa första försök och sedan fix. Utvöver har jag fortsatt att färdiställa index hemsidan efter skiss. )
+    Jag stött på ett problem där min sida fick en scrollbar längst ner av sidan. Jag tror att detta problem beror på att då min sida sträcker sig längre än datorskärmens höjd få jag dessutom en vertikal scrollbar som tar upp och tecker en del av sidan. Därmed skapas även en horisontell scrollbar så att man kan scrolla pytte lite åt höger för att se vad som finn bakom den vertikala scrollbaren. Detta vill jag inte ha på min sida. Jag åtgärdade detta problem genom att sätta grid-wrapperns width till 98.7vw. På så sätt täcks knappt något av den vertikala scrollbaren och därmed skapas inte en horisontell scrollbar. (bild här). 
     <!-- Fyll på med dokumentation här. -->
 
     <h3>Lektioner vecka 49</h3>
-    Använd flex för att styla ul tagg för navigationen. Sätter background-color på taggar för att se till att de befinner sig på rätt platser. Jag har ändrat om i grid-layouten för att vara mer lämplig för sidans syfte. Jag tog bort headerns transparency eftersom jag ansåg att det såg bättre ut. Men ett problem är att sektionerna hamnar över headertexterna så att man inte kan trycka på länkerna. Min nästa uppgift får bli att åtgärda detta problem. 
+    Använde flex för att styla ul tagg för navigationen. Sätter background-color på taggar för att se till att de befinner sig på rätt platser. Jag har ändrat om i grid-layouten för att vara mer lämplig för sidans syfte. Jag tog bort headerns transparency eftersom jag ansåg att det såg bättre ut. Men ett problem är att sektionerna hamnar över headertexterna så att man inte kan trycka på länkerna. Dessutom blir texten transperant när jag vill att de vara fullt synliga. Min nästa uppgift får bli att åtgärda dessaa problem.
+ 
+    <img src="/img/Dokumentation3.png" alt="innan">
+
+    <img src="/img/Dokumentation4.png" alt="efter">
+
+    <img src="/img/Dokumentation5_problem.png" alt="problem">
+
     <!-- Fyll på med dokumentation här. -->
 
+    <h3>Utanför lektioner vecka 50</h3>
+    Jag löste både problemet med att texten blev transparent samt att sektion boxarna täckte navigerings listan. Båda problemen berodde på att jag hade stylat taggarna med hjälp av "opacity" funktionen. Funktionen stylade inte bara backgrundsfärgen utan även taggarnas innehåll, alltså texten. Dessutom gjorde funktionen så att sektion boxarna la sig på det översta lagret av någon anledning vilket resulterade i att header texten täxktes för. Jag åtgärdade problemet genom att ta en titt på tidigare genomgångar och lägga märke till att det fanns ännu ett sätt att ändra transperans med hjälp av css, nämligen rgba funktionen. Med hjälp av denna kunde jag dessutom endast styla backgrundsfärgen genom att styla "background-color". På så sätt förblev texten i taggen fullt synlig och boxarna överlappade inte längre headern. <img src="/img/Dokumentation5_problem_löst.png" alt="problem_löst">
+
+    Dessutom insåg jag att den sidan jag hade skapat var mer lämplig för en meny sida än startsida. Anledningen till detta var att jag har två sektioner där det hade passat utmärkt att sätta in menyn för maten. Därför bytte jag namn på alla IDn som innehöll "index" till "meny" och ändrade samverkande kod för att allt ska funka. Därefter började jag skapa en ny index sida efter en ny skiss. <img src="/img/Skiss_Index.jpg" alt="Index_Skiss">
+
     <h3>Lektioner vecka 50</h3>
+    La in text i sektion taggarna på meny sidan och stylade sedan texten med hjälp av flex. Dessutom satte jag en snygg border radius på sektion taggarna.  <img src="/img/Dokumentation_v50.jpg" alt="dokumentation">  <img src="/img/Dokumentation_v50.2.jpg" alt="dokumentation"> 
+
+    Dessutom färdigställde jag index sidan efter skissen som jag gjort. jag började lite på Galleri sidan.
+
     <!-- Fyll på med dokumentation här. -->
 
 
