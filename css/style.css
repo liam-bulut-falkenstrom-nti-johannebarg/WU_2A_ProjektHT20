@@ -24,7 +24,7 @@ a:hover{
 
 header{
     grid-area:he;
-    background-color:rgb(22, 18, 16, 0.8);
+    background-color:rgba(22, 18, 16, 0.8);
     opacity: 1;
     top: 0px;
     height: 100px;
@@ -66,10 +66,13 @@ nav {
 
 footer {
     background:rgb(22, 18, 16);
-    grid-area: fo;
-
+    grid-area: fo; 
+    padding: 20px;
 }
 
+#logotyp_meny{
+    padding:0px 0px 0px 25px;
+}
 
 
 /* Meny */
@@ -80,7 +83,7 @@ footer {
 
 #meny_grid_wrapper{
     display:grid;
-    width: 98.7vw;
+    width: 98.6vw;
     height: 1050px;
     grid-template-columns: 1fr;
     grid-template-rows: 100px 180px 1fr 80px;
@@ -92,7 +95,7 @@ footer {
 }
 
 #meny_main{
-    background-image:url("/img/Turkey_Night.jpg");
+    background-image:url("/img/Meny_Background.jpg");
     grid-area: ma;
     display:grid;
     grid-template-columns: 1fr 1fr;
@@ -102,7 +105,6 @@ footer {
 }
 
 #kebab_bild_meny{
-    width: 98.7vw;
     grid-area: im;
 }
 
@@ -344,13 +346,13 @@ footer {
 /* Index */
 
 #index_body{
-    background-image: url("/img/Index_Banner.jpg"); 
+    background-image: url("/img/Index_Background.jpg"); 
 }
 
 #index_grid_wrapper{
     background-color: rgba(0,0,0,0);
     display:grid;
-    width: 98.7vw;
+    width: 98.6vw;
     height: 1250px;
     grid-template-columns: 1fr;
     grid-template-rows: 100px 1fr 80px;
@@ -375,7 +377,6 @@ footer {
     grid-area: Ir;
     background-color: rgba(141, 42, 42, 0.0);
     display:flex;
-    align-items:left;
     justify-content:center;
     padding: 110px;
     font-family: 'Kaushan Script', cursive;
@@ -410,7 +411,6 @@ footer {
 #index_sektion_om_oss h3{
     grid-area: Oh3;
     display:flex;
-    align-items:left;
     justify-content:left;
     font-size: 20px;
     padding: 0px 25px 0px 25px;
@@ -421,7 +421,7 @@ footer {
 
 #index_restaurang_info{
     grid-area: In;
-    background-color: rgb(0, 0, 0, 0.8);
+    background-color: rgba(0, 0, 0, 0.8);
     margin: 0px 0px 70px 0px;
     border-radius: 20px 0px 0px 20px;
 }
@@ -456,14 +456,67 @@ footer {
 /* Galleri */
 
 #galleri_grid_wrapper{
-    background-color: rgba(0,0,0,0);
+    background-color:rgb(22, 18, 16, 0);
     display:grid;
-    width: 98.7vw;
-    height: 1250px;
+    width: 98.6vw;
+    height: 3100px;
     grid-template-columns: 1fr;
     grid-template-rows: 100px 1fr 80px;
     grid-template-areas: 
     "he"
     "ma"
     "fo";
+}
+
+#galleri_body{
+    background-image: url('/img/Galleri_Background.jpg');
+}
+
+#galleri_main{
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+    "i1"
+    "i2"
+    "i3"
+    "i4"
+    "i5"
+    
+    ;
+}
+
+#Galleri_Bild_1{
+    grid-area: i1; 
+    display: flex;
+    justify-self: left;
+    align-self: center;   
+}
+
+#Galleri_Bild_2{
+    grid-area: i2;
+    display: flex;
+    justify-self: right;
+    align-self: center;
+}
+
+#Galleri_Bild_3{
+    grid-area: i3;
+    display: flex;
+    justify-self: left;
+    align-self: center;
+}
+
+#Galleri_Bild_4{
+    grid-area: i4;
+    display: flex;
+    justify-self: right;
+    align-self: center;
+}
+
+#Galleri_Bild_5{
+    grid-area: i5;
+    display: flex;
+    justify-self: left;
+    align-self: center;
 }
